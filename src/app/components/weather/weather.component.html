@@ -1,0 +1,215 @@
+<!-- Banner -->
+<!--
+        To use a video as your background, set data-video to the name of your video without
+        its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+        formats to work correctly.
+    -->
+<section id="banner" data-video="images/banner">
+  <div class="inner">
+    <h1>Weather Forecast for Italy</h1>
+    <p>
+      A Weather App<br />
+      built by Joaquim Barreto
+    </p>
+    <a
+      (click)="setCity('roma')"
+      class="button special scrolly"
+      style="margin: 10px 10px 10px 10px"
+      >Roma</a
+    >
+    <a
+      (click)="setCity('firenze')"
+      class="button special scrolly"
+      style="margin: 10px 10px 10px 10px"
+      >Florence</a
+    >
+    <a
+      (click)="setCity('milano')"
+      class="button special scrolly"
+      style="margin: 10px 10px 10px 10px"
+      >Milan</a
+    >
+    <a
+      (click)="setCity('venezia')"
+      class="button special scrolly"
+      style="margin: 10px 10px 10px 10px"
+      >Venice</a
+    >
+  </div>
+</section>
+
+<!-- One -->
+<section id="one" class="wrapper style2">
+  <div class="inner">
+    <div>
+      <div class="box">
+        <div class="image fit">
+          <img
+            src="{{
+              '../../../assets/images/' + weatherForecast.cityName + '.jpg'
+            }}"
+            alt=""
+          />
+        </div>
+        <div class="content">
+          <header class="align-center">
+            <h2>{{ weatherForecast.cityName }}</h2>
+            <p>{{ currentCityBlurb }}</p>
+          </header>
+          <hr />
+          <div class="inner">
+            <div id="flexgrid">
+              <div>
+                <header>
+                  <h3>
+                    {{ forecastTomorrowDay | date: "EEEE, MMMM d" }}
+                  </h3>
+                </header>
+                <img
+                  src="{{
+                    'http://openweathermap.org/img/wn/' +
+                      forecastTomorrowWeather.icon +
+                      '@2x.png'
+                  }}"
+                  alt=""
+                />
+                <h4>{{ forecastTomorrowWeather.description }}</h4>
+                <ul class="alt">
+                  <li>Min: {{ forecastTomorrowWeather.maxTemperature }}</li>
+                  <li>Max: {{ forecastTomorrowWeather.maxTemperature }}</li>
+                </ul>
+              </div>
+              <div>
+                <header>
+                  <h3>
+                    {{ forecastTomorrowPlusOneDay | date: "EEEE, MMMM d" }}
+                  </h3>
+                </header>
+                <img
+                  src="{{
+                    'http://openweathermap.org/img/wn/' +
+                      forecastTomorrowPlusOneWeather.icon +
+                      '@2x.png'
+                  }}"
+                  alt=""
+                />
+                <h4>{{ forecastTomorrowPlusOneWeather.description }}</h4>
+                <ul class="alt">
+                  <li>
+                    Min: {{ forecastTomorrowPlusOneWeather.maxTemperature }}
+                  </li>
+                  <li>
+                    Max: {{ forecastTomorrowPlusOneWeather.maxTemperature }}
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <header>
+                  <h3>
+                    {{ forecastTomorrowPlusTwoDay | date: "EEEE, MMMM d" }}
+                  </h3>
+                </header>
+                <img
+                  src="{{
+                    'http://openweathermap.org/img/wn/' +
+                      forecastTomorrowPlusTwoWeather.icon +
+                      '@2x.png'
+                  }}"
+                  alt=""
+                />
+                <h4>{{ forecastTomorrowPlusTwoWeather.description }}</h4>
+                <ul class="alt">
+                  <li>
+                    Min: {{ forecastTomorrowPlusTwoWeather.maxTemperature }}
+                  </li>
+                  <li>
+                    Max: {{ forecastTomorrowPlusTwoWeather.maxTemperature }}
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <header>
+                  <h3>
+                    {{ forecastTomorrowPlusThreeDay | date: "EEEE, MMMM d" }}
+                  </h3>
+                </header>
+                <img
+                  src="{{
+                    'http://openweathermap.org/img/wn/' +
+                      forecastTomorrowPlusThreeWeather.icon +
+                      '@2x.png'
+                  }}"
+                  alt=""
+                />
+                <h4>{{ forecastTomorrowPlusThreeWeather.description }}</h4>
+                <ul class="alt">
+                  <li>
+                    Min: {{ forecastTomorrowPlusThreeWeather.maxTemperature }}
+                  </li>
+                  <li>
+                    Max: {{ forecastTomorrowPlusThreeWeather.maxTemperature }}
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <header>
+                  <h3>
+                    {{ forecastTomorrowPlusFourDay | date: "EEEE, MMMM d" }}
+                  </h3>
+                </header>
+                <img
+                  src="{{
+                    'http://openweathermap.org/img/wn/' +
+                      forecastTomorrowPlusFourWeather.icon +
+                      '@2x.png'
+                  }}"
+                  alt=""
+                />
+                <h4>{{ forecastTomorrowPlusFourWeather.description }}</h4>
+                <ul class="alt">
+                  <li>
+                    Min: {{ forecastTomorrowPlusFourWeather.maxTemperature }}
+                  </li>
+                  <li>
+                    Max: {{ forecastTomorrowPlusFourWeather.maxTemperature }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Four -->
+<section id="four" class="wrapper style3">
+  <div class="inner">
+    <header class="align-center">
+      <h2>This App was done in Angular</h2>
+      <p>
+        This app is for portfolio purposes to showcase an example of an Angular
+        app.<br />
+        Data provided by <a href="https://openweathermap.org/">OpenWeatherMap</a>.
+      </p>
+    </header>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="wrapper">
+  <div class="inner">
+    <div class="copyright">
+      &copy; Untitled Design: <a href="https://templated.co/">TEMPLATED</a>.
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="../../../assets/js/jquery.min.js"></script>
+<script src="../../../assets/js/jquery.scrolly.min.js"></script>
+<script src="../../../assets/js/jquery.scrollex.min.js"></script>
+<script src="../../../assets/js/skel.min.js"></script>
+<script src="../../../assets/js/util.js"></script>
+<script src="../../../assets/js/main.js"></script>
